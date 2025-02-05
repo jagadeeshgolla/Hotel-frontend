@@ -162,7 +162,8 @@ const SignupForm = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={errors.email ? 'border-red-500' : ''}
+                  className={`w-full px-3 py-2 border rounded-md placeholder-gray-500 ${errors.email ? 'border-red-500' : ''}`}
+
                   placeholder="your@email.com"
                 />
                 {errors.email && (
@@ -183,7 +184,7 @@ const SignupForm = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={errors.phone ? 'border-red-500' : ''}
+                  className={`w-full px-3 py-2 border rounded-md placeholder-gray-500 ${errors.phone ? 'border-red-500' : ''}`}
                   placeholder="Enter 10-digit phone number"
                 />
                 {errors.phone && (
@@ -204,7 +205,7 @@ const SignupForm = () => {
                   type="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className={errors.password ? 'border-red-500' : ''}
+                  className={`w-full px-3 py-2 border rounded-md placeholder-gray-500 ${errors.password ? 'border-red-500' : ''}`}
                   placeholder="Create a strong password"
                 />
                 {errors.password && (
@@ -225,7 +226,7 @@ const SignupForm = () => {
                   type="password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className={errors.confirmPassword ? 'border-red-500' : ''}
+                  className={`w-full px-3 py-2 border rounded-md placeholder-gray-500 ${errors.confirmPassword ? 'border-red-500' : ''}`}
                   placeholder="Confirm your password"
                 />
                 {errors.confirmPassword && (
