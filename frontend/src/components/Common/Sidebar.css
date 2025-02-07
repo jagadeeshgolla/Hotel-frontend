@@ -1,0 +1,82 @@
+/* Sidebar container */
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 60px); /* Full height minus header */
+    background-color: #1e1e2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px; /* Ensures it starts below the header */
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Sidebar when collapsed */
+  .sidebar.collapsed {
+    width: 60px;
+  }
+  
+  /* Sidebar Menu */
+  .sidebar-menu {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Sidebar Items */
+  .sidebar-item {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .sidebar-item:hover {
+    background: #29293d;
+  }
+  
+  .sidebar-item.active {
+    background: #373759;
+  }
+  
+  /* Sidebar Link */
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+  }
+  
+  /* Sidebar Icon */
+  .icon {
+    font-size: 20px;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  /* Hide text when collapsed */
+  .sidebar.collapsed .label {
+    display: none;
+  }
+  
+  /* Main content adjustment when sidebar is collapsed */
+  .main-content {
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 250px; /* Default when sidebar is visible */
+    padding: 20px;
+    margin-top: 60px; /* Prevents overlap with fixed header */
+  }
+  
+  .sidebar.collapsed + .main-content {
+    margin-left: 60px; /* Adjusted width when collapsed */
+  }
+  
