@@ -1,0 +1,77 @@
+/* Home Page Container */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Locations Card */
+  .locations-card {
+    background: #1e1e2d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .locations-card h2 {
+    font-size: 18px;
+  }
+  
+  .locations-card .count {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Quick Actions Section */
+  .quick-actions {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quick-actions h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Quick Action Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttons button {
+    background: #1e1e2d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .buttons button:hover {
+    background: #29293d;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .quick-actions {
+      max-width: 100%;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
